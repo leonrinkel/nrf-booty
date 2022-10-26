@@ -1,0 +1,102 @@
+{
+    "configurations": [
+        {
+            "name": "pca10040/s132",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/targets/pca10040/s132/config",
+                "${SDK_ROOT}/**"
+            ],
+            "defines": [
+                "APP_TIMER_V2",
+                "APP_TIMER_V2_RTC1_ENABLED",
+                "BOARD_PCA10040",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52",
+                "NRF52832_XXAA",
+                "NRF52_PAN_74",
+                "NRF_SD_BLE_API_VERSION=7",
+                "S132",
+                "SOFTDEVICE_PRESENT",
+                "__HEAP_SIZE=8192",
+                "__STACK_SIZE=8192"
+            ],
+            "compilerPath": "${GNU_INSTALL_ROOT}/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mabi=aapcs",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        },
+        {
+            "name": "pca10056/s140",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/targets/pca10056/s140/config",
+                "${SDK_ROOT}/**"
+            ],
+            "defines": [
+                "APP_TIMER_V2",
+                "APP_TIMER_V2_RTC1_ENABLED",
+                "BOARD_PCA10056",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52840_XXAA",
+                "NRF_SD_BLE_API_VERSION=7",
+                "S140",
+                "SOFTDEVICE_PRESENT",
+                "__HEAP_SIZE=8192",
+                "__STACK_SIZE=8192"
+            ],
+            "compilerPath": "${GNU_INSTALL_ROOT}/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mabi=aapcs",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        },
+
+        {
+            "name": "pca10059/s140",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/targets/pca10059/s140/config",
+                "${SDK_ROOT}/**"
+            ],
+            "defines": [
+                "APP_TIMER_V2",
+                "APP_TIMER_V2_RTC1_ENABLED",
+                "BOARD_PCA10059",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52840_XXAA",
+                "NRF_SD_BLE_API_VERSION=7",
+                "S140",
+                "SOFTDEVICE_PRESENT"
+            ],
+            "compilerPath": "${GNU_INSTALL_ROOT}/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mabi=aapcs",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        }
+    ],
+    "version": 4
+}
