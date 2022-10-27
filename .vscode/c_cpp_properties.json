@@ -66,7 +66,6 @@
             "cppStandard": "c++17",
             "intelliSenseMode": "linux-gcc-arm"
         },
-
         {
             "name": "pca10059/s140",
             "includePath": [
@@ -84,6 +83,45 @@
                 "NRF_SD_BLE_API_VERSION=7",
                 "S140",
                 "SOFTDEVICE_PRESENT"
+            ],
+            "compilerPath": "${GNU_INSTALL_ROOT}/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                "-mabi=aapcs",
+                "-mfloat-abi=hard",
+                "-mfpu=fpv4-sp-d16"
+            ],
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-arm"
+        },
+        {
+            "name": "pca20020/s132",
+            "includePath": [
+                "${workspaceFolder}/src",
+                "${workspaceFolder}/targets/pca20020/s132/config",
+                "${SDK_ROOT}/**"
+            ],
+            "defines": [
+                "BLE_STACK_SUPPORT_REQD",
+                "BOARD_PCA20020",
+                "CONFIG_GPIO_AS_PINRESET",
+                "FLOAT_ABI_HARD",
+                "NRF52",
+                "NRF52832_XXAA",
+                "NRF52_PAN_74",
+                "NRF_DFU_SETTINGS_VERSION=2",
+                "NRF_DFU_SVCI_ENABLED",
+                "NRF_SD_BLE_API_VERSION=7",
+                "S132",
+                "SOFTDEVICE_PRESENT",
+                "SVC_INTERFACE_CALL_AS_NORMAL_FUNCTION",
+                "uECC_ENABLE_VLI_API=0",
+                "uECC_OPTIMIZATION_LEVEL=3",
+                "uECC_SQUARE_FUNC=0",
+                "uECC_SUPPORT_COMPRESSED_POINT=0",
+                "uECC_VLI_NATIVE_LITTLE_ENDIAN=1"
             ],
             "compilerPath": "${GNU_INSTALL_ROOT}/arm-none-eabi-gcc",
             "compilerArgs": [
