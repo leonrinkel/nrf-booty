@@ -46,6 +46,7 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/crypto/nrf_crypto_shared.c \
   $(PROJ_DIR)/src/dfu_public_key.c \
   $(PROJ_DIR)/src/secure_bootloader.c \
+  $(PROJ_DIR)/src/drv_sx1509.c \
   $(SDK_ROOT)/components/ble/common/ble_srv_common.c \
   $(SDK_ROOT)/components/libraries/bootloader/nrf_bootloader.c \
   $(SDK_ROOT)/components/libraries/bootloader/nrf_bootloader_app_start.c \
@@ -83,6 +84,8 @@ SRC_FILES += \
   $(SDK_ROOT)/components/libraries/crypto/backend/oberon/oberon_backend_eddsa.c \
   $(SDK_ROOT)/components/libraries/crypto/backend/oberon/oberon_backend_hash.c \
   $(SDK_ROOT)/components/libraries/crypto/backend/oberon/oberon_backend_hmac.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_twi.c \
+  $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_twi.c \
 
 # Include folders common to all targets
 INC_FOLDERS += \
@@ -135,6 +138,8 @@ INC_FOLDERS += \
   $(SDK_ROOT)/external/nano-pb \
   $(SDK_ROOT)/components/libraries/queue \
   $(SDK_ROOT)/components/libraries/ringbuf \
+  $(SDK_ROOT)/integration/nrfx/legacy \
+  $(SDK_ROOT)/modules/nrfx/drivers/include \
 
 # Libraries common to all targets
 LIB_FILES += \
