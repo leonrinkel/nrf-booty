@@ -1,7 +1,7 @@
 FROM mcr.microsoft.com/vscode/devcontainers/base:bullseye
 
-ARG GCC_URL="https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10-aarch64-linux.tar.bz2"
-ARG GCC_TAR="gcc-arm-none-eabi-10.3-2021.10-aarch64-linux.tar.bz2"
+ARG GCC_PRE="https://armkeil.blob.core.windows.net/developer/Files/downloads/gnu-rm/10.3-2021.10/gcc-arm-none-eabi-10.3-2021.10"
+ARG GCC_TAR="gcc-arm-none-eabi-10.3-2021.10.tar.bz2"
 
 ARG SDK_URL="https://nsscprodmedia.blob.core.windows.net/prod/software-and-other-downloads/sdks/nrf5/binaries/nrf5_sdk_17.1.0_ddde560.zip"
 ARG SDK_ZIP="nrf5_sdk_17.1.0_ddde560.zip"
@@ -21,6 +21,12 @@ RUN \
     rm -rf /var/lib/apt/lists/*
 
 RUN \
+    ARCH="$(dpkg --print-architecture)" && \
+    case "${ARCH##*-}" in \
+        amd64) GCC_URL="${GCC_PRE}-x86_64-linux.tar.bz2";; \
+        arm64) GCC_URL="${GCC_PRE}-aarch64-linux.tar.bz2";; \
+        *) echo "unsupported architecture"; exit 1;; \
+    esac && \
     cd "${DEPS}" && \
     curl -o "${GCC_TAR}" "${GCC_URL}" && \
     tar -xvf "${GCC_TAR}" && \
