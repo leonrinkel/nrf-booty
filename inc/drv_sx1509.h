@@ -6,7 +6,7 @@
 #include "nrf_drv_twi.h"
 #include "app_error.h"
 
-#define _REG_InputDisableA    0x01
+#define SX1509_REG_InputDisableA    0x01
 #define SX1509_REG_PullUpA          0x07
 #define SX1509_REG_OpenDrainA       0x0B
 #define SX1509_REG_DirA             0x0F
