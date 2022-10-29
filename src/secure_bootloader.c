@@ -116,6 +116,42 @@ static void dfu_observer(nrf_dfu_evt_type_t evt_type)
 {
     switch (evt_type)
     {
+        /**< Starting DFU. */
+        case NRF_DFU_EVT_DFU_INITIALIZED:
+            NRF_LOG_INFO("NRF_DFU_EVT_DFU_INITIALIZED");
+            break;
+        /**< Transport activated (e.g. BLE connected, USB plugged in). */
+        case NRF_DFU_EVT_TRANSPORT_ACTIVATED:
+            NRF_LOG_INFO("NRF_DFU_EVT_TRANSPORT_ACTIVATED");
+            break;
+        /**< Transport deactivated (e.g. BLE disconnected, USB plugged out). */
+        case NRF_DFU_EVT_TRANSPORT_DEACTIVATED:
+            NRF_LOG_INFO("NRF_DFU_EVT_TRANSPORT_DEACTIVATED");
+            break;
+        /**< DFU process started. */
+        case NRF_DFU_EVT_DFU_STARTED:
+            NRF_LOG_INFO("NRF_DFU_EVT_DFU_STARTED");
+            break;
+        /**< A DFU data object has been received. */
+        case NRF_DFU_EVT_OBJECT_RECEIVED:
+            NRF_LOG_INFO("NRF_DFU_EVT_OBJECT_RECEIVED");
+            break;
+        /**< DFU process has failed, been interrupted, or hung. */
+        case NRF_DFU_EVT_DFU_FAILED:
+            NRF_LOG_INFO("NRF_DFU_EVT_DFU_FAILED");
+            break;
+        /**< DFU process completed. */
+        case NRF_DFU_EVT_DFU_COMPLETED:
+            NRF_LOG_INFO("NRF_DFU_EVT_DFU_COMPLETED");
+            break;
+        /**< DFU process aborted. */
+        case NRF_DFU_EVT_DFU_ABORTED:
+            NRF_LOG_INFO("NRF_DFU_EVT_DFU_ABORTED");
+            break;
+    }
+
+    switch (evt_type)
+    {
         case NRF_DFU_EVT_DFU_FAILED:
         case NRF_DFU_EVT_DFU_ABORTED:
         case NRF_DFU_EVT_DFU_INITIALIZED:
